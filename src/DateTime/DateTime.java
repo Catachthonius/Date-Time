@@ -9,19 +9,17 @@ public class DateTime {
 
         LocalDate currentDate = LocalDate.now();
 
-        //Calculating number of days in current month and current day of the month:
+        //Calculating number of days in current month and how many days are left until the end of the month:
         int daysInOneMonth = currentDate.lengthOfMonth();
-        int currentDay = currentDate.getDayOfMonth();
+        int daysUntilEndOfTheMonth = daysInOneMonth - currentDate.getDayOfMonth();
 
-        //Calculating how many days are left until the end of the month:
-        int daysUntilEndOfTheMonth = daysInOneMonth - currentDay;
         System.out.println("Days left until the end of the month: " + daysUntilEndOfTheMonth);
 
         //Calculating number of days in current year and number of days left until the end of the year:
-        int daysInOneYear = currentDate.getDayOfYear();
-        int daysUntilEndOfTheYear = daysInOneYear - currentDay;
+        int daysInOneYear = currentDate.lengthOfYear();
+        int daysUntilEndOfTheYear = daysInOneYear - currentDate.getDayOfYear();
 
         System.out.println("Days left until the end of the year: " + daysUntilEndOfTheYear);
-
+        
     }
 }
